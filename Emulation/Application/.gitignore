@@ -1,0 +1,17 @@
+.idea
+credentials
+*.log
+runs/
+mapping.env
+
+aggregate/aggregate
+adapt/adapt
+camera/camera
+centraldashboard/centraldashboard
+cfd/cfd
+cntrl/cntrl
+generatedashboard/generatedashboard
+sensor/sensor
+pkgcntrl/pkgcntrl
+predict/predict
+prognosis/prognosis
