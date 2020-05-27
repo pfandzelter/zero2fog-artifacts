@@ -1,0 +1,8 @@
+[submodule "Simulation/FogExplorer"]
+	path = Simulation/FogExplorer
+	url = https://github.com/pfandzelter/FogExplorer
+	branch = master
+[submodule "Emulation/MockFog"]
+	path = Emulation/MockFog
+	url = https://github.com/pfandzelter/MockFogLight
+	branch = master

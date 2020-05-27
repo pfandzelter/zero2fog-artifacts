@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "id": "sensor",
+      "label": "Sensor",
+      "baseProperties": {
+        "availableMemory": 1,
+        "memoryPrice": 500,
+        "performanceIndicator": 0.001
+      }
+    },
+    {
+      "id": "pack_cntrl",
+      "label": "Packaging Controller",
+      "baseProperties": {
+        "availableMemory": 1,
+        "memoryPrice": 500,
+        "performanceIndicator": 0.05
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "camera",
+      "to": "prod_cntrl",
+      "baseProperties": {
+        "availableBandwidth": 100000000,
+        "bandwidthPrice": 0,
+        "latency": 0.0001
+      }
+    },
+    {
+      "from": "prod_cntrl",
+      "to": "camera",
+      "baseProperties": {
+        "availableBandwidth": 100000000,
+        "bandwidthPrice": 0,
+        "latency": 0.0001
+      }
+    },
+    {
+      "from": "sensor",
+      "to": "pack_cntrl",
+      "baseProperties": {
+        "availableBandwidth": 100000000,
+        "bandwidthPrice": 0,
+        "latency": 0.0001
+      }
+    },
+    {
+      "from": "pack_cntrl",
+      "to": "sensor",
+      "baseProperties": {
+        "availableBandwidth": 100000000,
+        "bandwidthPrice": 0,
+        "latency": 0.0001
+      }
+    },
+    {
+      "from": "prod_cntrl",
+      "to": "wgw",
+      "baseProperties": {
+        "availableBandwidth": 1000000,
+        "bandwidthPrice": 5,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "wgw",
+      "to": "prod_cntrl",
+      "baseProperties": {
+        "availableBandwidth": 1000000,
+        "bandwidthPrice": 5,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "pack_cntrl",
+      "to": "wgw",
+      "baseProperties": {
+        "availableBandwidth": 1000000,
+        "bandwidthPrice": 5,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "wgw",
+      "to": "pack_cntrl",
+      "baseProperties": {
+        "availableBandwidth": 1000000,
+        "bandwidthPrice": 5,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "wgw",
+      "to": "fctry_datacenter",
+      "baseProperties": {
+        "availableBandwidth": 1000000000,
+        "bandwidthPrice": 0,
+        "latency": 0.01
+      }
+    },
+    {
+      "from": "fctry_datacenter",
+      "to": "wgw",
+      "baseProperties": {
+        "availableBandwidth": 1000000000,
+        "bandwidthPrice": 0,
+        "latency": 0.01
+      }
+    },
+    {
+      "from": "fctry_datacenter",
+      "to": "office_datacenter",
+      "baseProperties": {
+        "availableBandwidth": 10000000000,
+        "bandwidthPrice": 1,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "office_datacenter",
+      "to": "fctry_datacenter",
+      "baseProperties": {
+        "availableBandwidth": 10000000000,
+        "bandwidthPrice": 1,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "fctry_datacenter",
+      "to": "cloud",
+      "baseProperties": {
+        "availableBandwidth": 1000000000,
+        "bandwidthPrice": 10,
+        "latency": 0.1
+      }
+    },
+    {
+      "from": "cloud",
+      "to": "fctry_datacenter",
+      "baseProperties": {
+        "availableBandwidth": 1000000000,
+        "bandwidthPrice": 10,
+        "latency": 0.1
+      }
+    },
+    {
+      "from": "office_datacenter",
+      "to": "cloud",
+      "baseProperties": {
+        "availableBandwidth": 10000000000,
+        "bandwidthPrice": 10,
+        "latency": 0.05
+      }
+    },
+    {
+      "from": "cloud",
+      "to": "office_datacenter",
+      "baseProperties": {
+        "availableBandwidth": 10000000000,
+        "bandwidthPrice": 10,
+        "latency": 0.05
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "camera",
+      "label": "Camera",
+      "type": "sensor",
+      "baseProperties": {
+        "mode": "individual",
+        "requiredMemory": 0,
+        "outputRate": 10
+      }
+    },
+    {
+      "id": "cfd",
+      "label": "Check for Defects",
+      "type": "service",
+      "baseProperties": {
+        "mode": "individual",
+        "requiredMemory": 10,
+        "outputRatio": 0.1,
+        "referenceProcessingTime": 0.01
+      }
+    },
+    {
+      "id": "cntrl",
+      "label": "Production Controller",
+      "type": "sink",
+      "baseProperties": {
+        "requiredMemory": 0
+      }
+    }
+  ],
+  "dataPaths": [
+    {
+      "from": "camera",
+      "to": "cfd"
+    },
+    {
+      "from": "cfd",
+      "to": "cntrl"
+    }
+  ],
+  "placements": {
+    "camera": "camera",
+    "cntrl": "prod_cntrl"
+  }
+}
