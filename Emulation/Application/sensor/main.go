@@ -21,7 +21,7 @@ const upper int = 150
 const lower int = 50
 
 func main() {
-	// update the world every 100 milliseconds
+	// update the world every 10 milliseconds
 	ticker := time.NewTicker(time.Duration(interval) * time.Millisecond)
 	for {
 		select {
