@@ -1,8 +1,12 @@
 [submodule "Simulation/FogExplorer"]
 	path = Simulation/FogExplorer
-	url = https://github.com/pfandzelter/FogExplorer
-	branch = master
+	url = https://github.com/OpenFogStack/FogExplorer
+	branch = zero2fog
 [submodule "Emulation/MockFog"]
 	path = Emulation/MockFog
-	url = https://github.com/pfandzelter/MockFogLight
+	url = https://github.com/OpenFogStack/MockFogLight
+	branch = zero2fog
+[submodule "Emulation/Application"]
+	path = Emulation/Application
+	url = https://github.com/OpenFogStack/smart-factory-fog-example
 	branch = master

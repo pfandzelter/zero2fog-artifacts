@@ -12,9 +12,9 @@ The code in this repository is licensed under the terms of the [MIT](./LICENSE) 
 
 ## Instructions
 
-Use `git submodule init` to checkout our adapted implementations of FogExplorer and MockFog.
+Use `git submodule init` to checkout the smart factory example application and our adapted implementations of FogExplorer and MockFog.
 
-This repository contains the following artefacts:
+This repository contains the following artifacts:
 
 - automation used with FogExplorer
 - services as deployed to MockFog and our physical testbed (as submodule)
