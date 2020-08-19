@@ -2,7 +2,7 @@
 
 This repository contains prototypes and implementations for our smart factory case study.
 
-Please note that the article is still pending publication.
+Please note that the article is still pending publication, but [a preprint is available on arXiv](https://arxiv.org/abs/2008.07891).
 
 A full list of our [publications](https://www.mcc.tu-berlin.de/menue/forschung/publikationen/parameter/en/) and [prototypes](https://www.mcc.tu-berlin.de/menue/forschung/prototypes/parameter/en/) is available on our group website.
 
