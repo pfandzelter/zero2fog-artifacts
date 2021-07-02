@@ -8,7 +8,7 @@ If you use this software in a publication, please cite it as:
 
 ### Text
 
-T. Pfandzelter, J. Hasenburg, and D. Bermbach, **From Zero to Fog: Efficient Engineering of Fog-Based Internet of Things Applications**, Softw. Pract. Exp., no. spe.3003, Jun. 2021, doi: 10.1002/spe.3003.
+T. Pfandzelter, J. Hasenburg, and D. Bermbach, **From Zero to Fog: Efficient Engineering of Fog-Based Internet of Things Applications**, Software: Practice and Experience, vol. 51, no. 8, pp. 1798–1821, Aug. 2021.
 
 ### BibTeX
 
